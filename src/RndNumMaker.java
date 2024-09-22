@@ -4,8 +4,8 @@ import java.util.Random;
 import java.util.Set;
 
 public class RndNumMaker {
-    int[] randNum = new int[3];
-    public int[] RndNumMaker() {
+    int[] randomNumber = new int[3];
+    public int[] rndNumMaker() {
         Set<Integer> rndNumSet = new HashSet<>();
         Random random = new Random();
 
@@ -20,9 +20,9 @@ public class RndNumMaker {
         Iterator<Integer> iterator = rndNumSet.iterator();
         int i = 0;
         while (iterator.hasNext()) {
-            randNum[i++] = iterator.next();
+            randomNumber[i++] = iterator.next();
         }
         // 데이터 섞기?
-        return randNum;
+        return randomNumber;
     }
 }
