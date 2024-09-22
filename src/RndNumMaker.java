@@ -1,21 +1,11 @@
-import java.util.*;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.Random;
+import java.util.Set;
 
-//TIP 코드를 <b>실행</b>하려면 <shortcut actionId="Run"/>을(를) 누르거나
-// 에디터 여백에 있는 <icon src="AllIcons.Actions.Execute"/> 아이콘을 클릭하세요.
-public class GameLogic {
-    private int[] randNum = new int[3];
-    private int[] usersInput;
-    private int strike;
-    private int ball;
-    private int out;
-
-    // 게임 시작 메소드
-    public void playStart() {
-        getRandNum(); // 난수 생성
-    }
-
-    // 난수 생성 메소드
-    private void getRandNum() {
+public class RndNumMaker {
+    int[] randNum = new int[3];
+    public int[] RndNumMaker() {
         Set<Integer> rndNumSet = new HashSet<>();
         Random random = new Random();
 
@@ -32,8 +22,7 @@ public class GameLogic {
         while (iterator.hasNext()) {
             randNum[i++] = iterator.next();
         }
-
         // 데이터 섞기?
-
+        return randNum;
     }
 }
