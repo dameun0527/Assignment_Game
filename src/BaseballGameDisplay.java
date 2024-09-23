@@ -12,4 +12,3 @@ public class BaseballGameDisplay {
         System.out.println("정답입니다!");
     }
 }
-

@@ -12,7 +12,6 @@ public class BaseballGame {
         rndNumMaker = new RndNumMaker();
         randomNumber = rndNumMaker.rndNumMaker();
         System.out.println("생성된 난수: " + randomNumber[0] + ", " + randomNumber[1] + ", " + randomNumber[2]);
-        System.out.println("게임이 시작되었습니다!");
     }
 
     public void play() {
@@ -32,6 +31,7 @@ public class BaseballGame {
             int ball = countBall(userInput);
 
             if (strike == 3) {
+                display.displayHint(strike, ball);
                 display.correctAnswer();
                 break;
             } else {
@@ -60,7 +60,6 @@ public class BaseballGame {
                 return false;
             }
         }
-
         return true;
     }
     private int countStrike (String input){
