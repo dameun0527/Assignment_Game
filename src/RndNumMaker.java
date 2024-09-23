@@ -21,7 +21,7 @@ public class RndNumMaker {
             randomNumber[i++] = iterator.next();
         }
         return randomNumber;
-        //Tip: collection.shuffle 이용해 데이터를 섞기
+        //Tip: collections.shuffle 이용해 데이터를 섞기
 //        List<Integer> rndNumSet = new ArrayList<>();
 //        for (int i = 1; i <= 9; i++) {
 //            rndNumSet.add(i);

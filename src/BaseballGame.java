@@ -1,5 +1,4 @@
 import java.util.HashSet;
-import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -23,7 +22,6 @@ public class BaseballGame {
 
             if (!validateInput(userInput)) {
                 display.showInvalidInput();
-                System.out.println("올바르지 않은 입력값입니다.");
                 continue;
             }
             int strike = countStrike(userInput);
@@ -42,21 +40,25 @@ public class BaseballGame {
 
     protected boolean validateInput(String userInput) {
         if (userInput.length() != 3) {
+            System.out.println("3자리 수를 입력해주세요.");
             return false;
         }
         for (int i = 0; i < userInput.length(); i++) {
             if (!Character.isDigit(userInput.charAt(i))) {
+                System.out.println("숫자를 입력해주세요.");
                 return false;
             }
         }
         for (int i = 0; i < userInput.length(); i++) {
             if (userInput.charAt(i) == '0') {
+                System.out.println("1부터 9까지의 숫자를 입력해주세요.");
                 return false;
             }
         }
         Set<Character> digitSet = new HashSet<>();
         for (int i = 0; i < userInput.length(); i++) {
             if (!digitSet.add(userInput.charAt(i))) {
+                System.out.println("각 자리수는 중복될 수 없습니다.");
                 return false;
             }
         }
