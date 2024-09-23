@@ -1,10 +1,8 @@
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 public class RndNumMaker {
     int[] randomNumber = new int[3];
+
     public int[] rndNumMaker() {
         Set<Integer> rndNumSet = new HashSet<>();
         Random random = new Random();
@@ -22,7 +20,21 @@ public class RndNumMaker {
         while (iterator.hasNext()) {
             randomNumber[i++] = iterator.next();
         }
-        // 데이터 섞기?
         return randomNumber;
+        //Tip: collection.shuffle 이용해 데이터를 섞기
+//        List<Integer> rndNumSet = new ArrayList<>();
+//        for (int i = 1; i <= 9; i++) {
+//            rndNumSet.add(i);
+//        }
+//        Collections.shuffle(rndNumSet);
+//
+//        int[] randomNumber = new int[3];
+//        for (int i = 0; i < 3; i++) {
+//            randomNumber[i] = rndNumSet.get(i);
+//        }
+//        return randomNumber;
+
     }
+
+
 }
